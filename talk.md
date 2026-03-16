@@ -37,11 +37,14 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 * We'll start by following the data generating physics processes to cover the breadth
 ]
 ]
-.kol-2-5.center[
-<div class="figure-vcenter" style="--top:40%;">
+.kol-2-5.center.large[
+<div class="figure-vcenter" style="--top:42%;">
    <figure>
       <a href="https://cds.cern.ch/record/2802918">
          <img src="figures/HL-LHC-cpu-projections-atlas_annotated.png" width="100%">
+      </a>
+      <a href="https://cds.cern.ch/record/2815292">
+         <img src="figures/HL-LHC-cpu-projections-cms.png" width="100%">
       </a>
       <figcaption>Experiments given software community<br><b>new challenges and opportunities</b>.<br>Projected required compute usage for HL-LHC <br>(want R&D below budget line)</figcaption>
    </figure>
