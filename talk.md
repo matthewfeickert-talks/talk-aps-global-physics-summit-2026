@@ -113,30 +113,35 @@ Snakemake is pretty popular but there is a long list of things people use, a ton
 
 
 ---
-# Event Reconstruction and Tracking
+# Event Reconstruction
 
 .kol-1-2[
 .large[
-* Reconstruction, calorimeter clustering, particle flow
-* Track reconstruction
-   - [ACTS](https://github.com/acts-project/acts) (A Common Tracking Software) &nbsp;<a href="https://github.com/acts-project/acts"><img src="figures/acts-logo.svg" style="height:1.5em; vertical-align:middle;"></a>
-      - Cross-experiment tracking library
-      - GPU-accelerated track finding
+* CPU intensive event reconstruction software generally experiment specific frameworks given all steps (tracking to calorimeter clustering to physics object reconstruction)
+* Rise of ML-based reconstruction methods
+   - DUNE: CNNs for vertex finding
+   - ATLAS: Pursuing GNNs for tracking (benefitting from ACTS)
+   - CMS: Track seed filtering in HLT
+   <!-- TODO: Get reference -->
+   - ML-based jet calibration at LHC experiments
+]
+]
+.kol-1-2[
+* [ACTS](https://github.com/acts-project/acts) (A Common Tracking Software) &nbsp;<a href="https://github.com/acts-project/acts"><img src="figures/acts-logo.svg" style="height:1.5em; vertical-align:middle;"></a> is common software for .bold[track reconstruction]
+   - Cross-experiment tracking library
+   - GPU-accelerated track finding
 <!-- https://cds.cern.ch/record/2921878/ -->
-      - Integration into [ATLAS Athena](https://gitlab.cern.ch/atlas/athena)
-* ML-based reconstruction emerging
-   - GNNs for tracking
-   - ML-based jet calibration
-]
-]
-.kol-1-2[
-<div class="figure-placeholder">
-   Recommended figure: Visualization of track reconstruction in a detector (e.g., Acts tracking display or event display showing reconstructed tracks)
-</div>
-]
+   <!-- - Integration into [ATLAS Athena](https://gitlab.cern.ch/atlas/athena) -->
+   - Over 13 experiments of varying size (ATLAS and LDMX) using ACTS as of [2025 ACTS workshop](https://indico.cern.ch/event/1501989/)
 
-.large[
-Reconstruction is the **most CPU-intensive** step in the processing chain
+<div class="figure-vcenter" style="--top:30%;">
+   <figure>
+      <a href="http://cds.cern.ch/record/2912217">
+         <img src="figures/ATLAS_acts_vs_nonacts.png" width="110%">
+      </a>
+      <figcaption>CPU time of ACTS (more complex algorithm) / non-ACTS (default) in ATLAS Athena for track finding with improvements applied.<br>(<a href="http://cds.cern.ch/record/2912217">ATL-PHYS-PUB-2024-017</a>)</figcaption>
+   </figure>
+</div>
 ]
 
 ???
@@ -170,15 +175,6 @@ HSF Generator WG coordinates efforts to improve generator efficiency
 
 ???
 Simulation is essential for interpreting experimental results, and it consumes roughly half of the global HEP computing budget. The chain starts with physics event generators — MadGraph and Sherpa for hard processes, Pythia and Herwig for parton showering and hadronization — and continues through Geant4 for detailed detector response simulation. Because full Geant4 simulation is so expensive, the community is actively pursuing fast simulation alternatives: parametric approaches like AtlFast and Delphes, and increasingly ML-based surrogates like CaloFlow for calorimeter simulation. The HSF Generator Working Group coordinates community-wide efforts to improve generator software efficiency, which is critical for the HL-LHC era.
-
----
-# Flavour tagging
-
-.kol-1-2[
-.large[
-* Flavor tagging software across HEP
-]
-]
 
 ---
 # End-user Analysis
@@ -248,6 +244,15 @@ Simulation is essential for interpreting experimental results, and it consumes r
 class: end-slide, center
 
 .large[Backup]
+
+---
+# Flavour tagging
+
+.kol-1-2[
+.large[
+* Flavor tagging software across HEP
+]
+]
 
 ---
 
