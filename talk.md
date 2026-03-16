@@ -29,8 +29,12 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 
 .kol-2-3[
 .huge[
-* Overview of what is going to be discussed.
-* Guide will be the steps of a particle physics experiment starting from the data generating physics process to the end stages of user analysis.
+* Robust and performant software is .bold[critical] to the high energy physics community
+* Reflect on the scope of the HEP software community
+   - Current software
+   - Ongoing work to support experiments
+   - Community support for future experiment software ecosystems
+* We'll start by following the data generating physics processes to cover the breadth
 ]
 ]
 
@@ -195,6 +199,11 @@ Simulation is essential for interpreting experimental results, and it consumes r
    </figure>
 </div>
 ]
+
+---
+# A look towards community software
+
+* We should do it where we can
 
 ---
 # Summary
