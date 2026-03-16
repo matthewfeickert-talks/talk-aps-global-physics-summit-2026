@@ -55,16 +55,16 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 # Data Acquisition & Trigger
 
 .kol-1-2[
-.large[
+.code-large[
 * Trigger systems bring event rates from data source to manageable levels for readout
    - At LHC: 40 MHz beam crossing to $O$(10 MHz)
 * In LHC experiments see exploitation of .bold[heterogeneous computing] in trigger to increase computing power
    - ATLAS: [AthenaMT](https://atlas.cern/updates/briefing/renovating-athena) (multithreaded framework)
    <!-- https://indico.cern.ch/event/1361472/contributions/5972904/ -->
    - CMS: GPU-accelerated reconstruction in HLT with Pixel, HCAL, ECAL code running on CUDA-enabled GPUs using &nbsp;<a href="https://github.com/alpaka-group/alpaka/"><img src="figures/alpaka-logo.svg" style="height:1.2em; vertical-align:middle;"></a>
-   - LHCb: Allen &mdash; Fully GPU-based HLT1 ([Comput Softw Big Sci 4, 7 (2020)](https://doi.org/10.1007/s41781-020-00039-7))
+   - LHCb: Allen &mdash; Fully GPU-based HLT1 <br>([Comput Softw Big Sci 4, 7 (2020)](https://doi.org/10.1007/s41781-020-00039-7))
 <!-- TODO: Explain what Gaudi is -->
-* ATLAS and LHCb both build on the [GAUDI](https://inspirehep.net/literature/568472) event data processing framework
+* ATLAS and LHCb both build on the [GAUDI](https://inspirehep.net/literature/568472) event data processing framework &nbsp;<a href="https://gaudi.web.cern.ch/gaudi/"><img src="figures/gaudilogo-logo.png" style="height:1.2em; vertical-align:middle;"></a>
 ]
 ]
 .kol-1-2.center[
