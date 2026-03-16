@@ -42,6 +42,16 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 * Triggers
 ]
 ]
+.kol-1-2.center[
+<div class="figure-vcenter" style="--top:40%;">
+   <figure>
+      <a href="https://lhcb-starterkit-run3.docs.cern.ch/first-analysis-steps/dataflow/">
+         <img src="figures/lhcb_online_dataflow.png" width="100%">
+      </a>
+      <figcaption>LHCb's "Allen" GPU HLT1 and "Moore" CPU HLT2 with the Moore software bring trigger rate to 30 MHz</figcaption>
+   </figure>
+</div>
+]
 
 <!-- LHC information from Chris Burr:
 The highest level starting point we have is: https://lhcb-starterkit-run3.docs.cern.ch/first-analysis-steps/dataflow/
@@ -178,9 +188,11 @@ Simulation is essential for interpreting experimental results, and it consumes r
 ]
 .kol-1-3.center[
 <div class="figure-vcenter" style="--top:40%;">
-   <a href="https://key4hep.github.io/key4hep-doc/">
-      <img src="figures/key4hep-logo.png" width="100%">
-   </a>
+   <figure>
+      <a href="https://key4hep.github.io/key4hep-doc/">
+         <img src="figures/key4hep-logo.png" width="100%">
+      </a>
+   </figure>
 </div>
 ]
 
