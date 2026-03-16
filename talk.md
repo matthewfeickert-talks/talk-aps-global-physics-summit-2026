@@ -54,11 +54,10 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 ---
 # Simulation
 
-.kol-1-2[
+.kol-2-5[
 .large[
-* **Physics event generators**
-   - MadGraph, Sherpa, Pythia, Herwig, EvtGen
-   - Hard process → parton shower → hadronization → decay
+* .bold[Physics event generator]:<br>Hard process, showering, hadronization, heavy flavour decay
+   - MadGraph5_aMC@NLO, Pythia, Sherpa, Herwig, EvtGen
 * **Detector simulation**
    - Geant4: the cornerstone
 * **Fast simulation** approaches
@@ -66,14 +65,16 @@ This talk will review the global HEP software ecosystem and discuss how it is us
    - ML-based surrogates: FlashSim, CaloFlow
 ]
 ]
-.kol-1-2[
-<div class="figure-placeholder">
-   Recommended figure: Diagram showing the simulation chain from generator through detector simulation, or comparison of full vs. fast simulation output
-</div>
-]
-
-.large[
-HSF Generator WG coordinates efforts to improve generator efficiency
+.kol-3-5[
+$$
+p\left(x \middle|\theta\right) = \int dz\_{D} dz\_{S} dz\_{P} \\, p\left(x \middle|z\_{D}\right) p\left(z\_{D} \middle|z\_{S}\right) p\left(z\_{S} \middle|z\_{P}\right) p\left(z\_{P} \middle|\theta\right)
+$$
+<p style="text-align:center;">
+   <a href="https://arxiv.org/abs/1911.01429">
+      <img src="figures/likelihood-prediction-simulation-chain.png"; width=100%>
+   </a>
+</p>
+<!-- TODO: Fix figure -->
 ]
 
 ???
@@ -168,7 +169,7 @@ Snakemake is pretty popular but there is a long list of things people use, a ton
       <a href="http://cds.cern.ch/record/2912217">
          <img src="figures/ATLAS_acts_vs_nonacts.png" width="110%">
       </a>
-      <figcaption>CPU time of ACTS (more complex algorithm) / non-ACTS (default) in ATLAS Athena for track finding with improvements applied.<br>(<a href="http://cds.cern.ch/record/2912217">ATL-PHYS-PUB-2024-017</a>)</figcaption>
+      <figcaption>CPU time of ACTS (more computation) / non-ACTS (default) in ATLAS Athena for track finding with improvements applied.<br>(<a href="http://cds.cern.ch/record/2912217">ATL-PHYS-PUB-2024-017</a>)</figcaption>
    </figure>
 </div>
 ]
