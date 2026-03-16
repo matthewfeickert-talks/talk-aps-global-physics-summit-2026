@@ -453,6 +453,33 @@ td {
     font-size: 0.8em;
 }
 
+/* Stack multiple figures vertically in a column.
+   Use --width on individual <figure> elements to control their width.
+   Example:
+   <div class="figure-column">
+      <figure><img ...><figcaption>...</figcaption></figure>
+      <figure><img ...><figcaption>...</figcaption></figure>
+   </div> */
+.figure-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    gap: 0.8em;
+}
+
+.figure-column > figure {
+    margin: 0;
+    text-align: center;
+    width: var(--width, 100%);
+}
+
+.figure-column > figure > figcaption {
+    margin-top: 0.4em;
+    font-size: 0.8em;
+}
+
 /* Title slide */
 
 .title-slide:after {

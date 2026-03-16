@@ -55,18 +55,32 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 # Data Acquisition & Trigger
 
 .kol-1-2[
-.huge[
-* Triggers
+.large[
+* Trigger systems bring event rates from data source to manageable levels for readout
+   - At LHC: 40 MHz beam crossing to $O$(10 MHz)
+* In LHC experiments see exploitation of .bold[heterogeneous computing] in trigger to increase computing power
+   - ATLAS: [AthenaMT](https://atlas.cern/updates/briefing/renovating-athena) (multithreaded framework)
+   <!-- https://indico.cern.ch/event/1361472/contributions/5972904/ -->
+   - CMS: GPU-accelerated reconstruction in HLT with Pixel, HCAL, ECAL code running on CUDA-enabled GPUs using [.bold[alpaka]](https://github.com/alpaka-group/alpaka/)
+   - LHCb: Allen &mdash; Fully GPU-based HLT1 ([Comput Softw Big Sci 4, 7 (2020)](https://doi.org/10.1007/s41781-020-00039-7))
+<!-- TODO: Explain what Gaudi is -->
+* ATLAS and LHCb both build on [GAUDI](https://inspirehep.net/literature/568472)
 ]
 ]
 .kol-1-2.center[
-<div class="figure-vcenter" style="--top:40%;">
-   <figure>
-      <a href="https://lhcb-starterkit-run3.docs.cern.ch/first-analysis-steps/dataflow/">
-         <img src="figures/lhcb_online_dataflow.png" width="100%">
-      </a>
-      <figcaption>LHCb's "Allen" GPU HLT1 and "Moore" CPU HLT2 with the Moore software bring trigger rate to 30 MHz</figcaption>
-   </figure>
+<div class="figure-column">
+<figure>
+   <a href="https://lhcb-starterkit-run3.docs.cern.ch/first-analysis-steps/dataflow/">
+      <img src="figures/lhcb_online_dataflow.png" width="100%">
+   </a>
+   <figcaption>LHCb's "Allen" GPU HLT1 and "Moore" CPU HLT2 with the Moore software bring trigger rate to 30 MHz</figcaption>
+</figure>
+<figure style="--width:100%;">
+   <a href="https://cds.cern.ch/record/2914421">
+      <img src="figures/cms_cpu-vs-gpu.png" width="60%">
+   </a>
+   <figcaption>Comparison of the average processing time per event, measured on the 2024 CMS HLT nodes (<a href="https://cds.cern.ch/record/2914421">CMS-DP-2024-082</a>)</figcaption>
+</figure>
 </div>
 ]
 
