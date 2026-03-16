@@ -55,14 +55,15 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 # Simulation
 
 .kol-2-5[
-.large[
-* .bold[Physics event generator]:<br>Hard process, showering, hadronization, heavy flavour decay
+.code-large[
+* Excellent fidelity simulation is .bold[critical] for all other components of physics
+* .bold[Physics event generator]:<br>Hard process, showering, hadronization, decay
    - MadGraph5_aMC@NLO, Pythia, Sherpa, Herwig, EvtGen
-* **Detector simulation**
-   - Geant4: the cornerstone
-* **Fast simulation** approaches
-   - Parametric: AtlFast, Delphes
-   - ML-based surrogates: FlashSim, CaloFlow
+* .bold[Detector simulation] with [Geant4](https://cern.ch/geant4)
+* .bold[Fast simulation] approaches to decrease CPU
+   - Parametric: Delphes
+   - ML-based surrogates: [FlashSim](https://cds.cern.ch/record/2858890)
+   - Combination: AtlFast3
 ]
 ]
 .kol-3-5[
@@ -71,7 +72,7 @@ p\left(x \middle|\theta\right) = \int dz\_{D} dz\_{S} dz\_{P} \\, p\left(x \midd
 $$
 <p style="text-align:center;">
    <a href="https://arxiv.org/abs/1911.01429">
-      <img src="figures/likelihood-prediction-simulation-chain.png"; width=100%>
+      <img src="figures/prediction-simulation-chain.png"; width=100%>
    </a>
 </p>
 <!-- TODO: Fix figure -->
