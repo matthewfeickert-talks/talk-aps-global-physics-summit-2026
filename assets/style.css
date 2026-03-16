@@ -428,6 +428,21 @@ td {
     width: 200%;
 }
 
+/* Vertically center a figure within the slide content area.
+   Use --top to set the vertical position (default: 50%).
+   Example: <div class="figure-vcenter" style="--top:40%;"> */
+.figure-vcenter {
+    position: relative;
+    height: 550px;
+}
+
+.figure-vcenter > * {
+    position: absolute;
+    top: var(--top, 50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Title slide */
 
 .title-slide:after {

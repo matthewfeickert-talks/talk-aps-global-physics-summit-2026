@@ -147,12 +147,17 @@ Simulation is essential for interpreting experimental results, and it consumes r
 ]
 ]
 .kol-1-3.center[
-<p style="text-align:center;">
+<div class="figure-vcenter" style="--top:50%;">
    <a href="https://key4hep.github.io/key4hep-doc/">
-      <img src="figures/key4hep-logo.png"; width=100%>
+      <img src="figures/key4hep-logo.png" width="100%">
    </a>
-</p>
+</div>
 ]
+
+---
+# Summary
+
+* Outlook
 
 
 ---
