@@ -483,7 +483,8 @@ td {
 /* Even worse hack to get another logo on */
 .title-slide:before {
     content: '';
-    background: url("../assets/logos/logo_ATLAS.png") no-repeat;
+    /* background: url("../assets/logos/logo_ATLAS.png") no-repeat; */
+    background: url("../assets/logos/logo_IRIS-HEP.png") no-repeat;
     background-size: 100% 100%;
     width: 242px;
     height: 127px;
