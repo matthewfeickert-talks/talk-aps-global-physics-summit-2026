@@ -29,9 +29,131 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 
 .kol-2-3[
 .huge[
-* Overview
+* Overview of what is going to be discussed.
+* Guide will be the steps of a particle physics experiment starting from the data generating physics process to the end stages of user analysis.
 ]
 ]
+
+---
+# Data Acquisition & Trigger
+
+.kol-1-2[
+.huge[
+* Triggers
+]
+]
+
+
+---
+# Event Reconstruction & Pattern Recognition
+
+.kol-1-2[
+.large[
+* Track reconstruction, calorimeter clustering, particle flow
+* *Acts* (A Common Tracking Software)
+   - Cross-experiment tracking library
+   - GPU-accelerated track finding
+* ML-based reconstruction emerging
+   - GNNs for tracking
+   - ML-based jet calibration
+]
+]
+.kol-1-2[
+<div class="figure-placeholder">
+   Recommended figure: Visualization of track reconstruction in a detector (e.g., Acts tracking display or event display showing reconstructed tracks)
+</div>
+]
+
+.large[
+Reconstruction is the **most CPU-intensive** step in the processing chain
+]
+
+???
+Once events pass the trigger, they must be reconstructed — turning raw detector hits into physics objects like tracks, jets, and leptons. This is the most computationally expensive step. Track reconstruction alone can dominate the CPU budget, which has motivated cross-experiment efforts like Acts — A Common Tracking Software — that provides a detector-agnostic, thread-safe, GPU-capable tracking library. Machine learning is increasingly being explored for reconstruction tasks, with graph neural networks showing promise for track finding in the dense environments expected at the HL-LHC.
+
+
+---
+# Simulation
+
+.kol-1-2[
+.large[
+* **Physics event generators**
+   - MadGraph, Sherpa, Pythia, Herwig, EvtGen
+   - Hard process → parton shower → hadronization → decay
+* **Detector simulation**
+   - Geant4: the cornerstone
+* **Fast simulation** approaches
+   - Parametric: AtlFast, Delphes
+   - ML-based surrogates: FlashSim, CaloFlow
+]
+]
+.kol-1-2[
+<div class="figure-placeholder">
+   Recommended figure: Diagram showing the simulation chain from generator through detector simulation, or comparison of full vs. fast simulation output
+</div>
+]
+
+.large[
+HSF Generator WG coordinates efforts to improve generator efficiency
+]
+
+???
+Simulation is essential for interpreting experimental results, and it consumes roughly half of the global HEP computing budget. The chain starts with physics event generators — MadGraph and Sherpa for hard processes, Pythia and Herwig for parton showering and hadronization — and continues through Geant4 for detailed detector response simulation. Because full Geant4 simulation is so expensive, the community is actively pursuing fast simulation alternatives: parametric approaches like AtlFast and Delphes, and increasingly ML-based surrogates like CaloFlow for calorimeter simulation. The HSF Generator Working Group coordinates community-wide efforts to improve generator software efficiency, which is critical for the HL-LHC era.
+
+---
+# Flavour tagging
+
+.kol-1-2[
+.large[
+* **Physics event generators**
+   - MadGraph, Sherpa, Pythia, Herwig, EvtGen
+   - Hard process → parton shower → hadronization → decay
+]
+]
+
+---
+# End-user Analysis
+
+.kol-1-2[
+.large[
+* Show multilingual story here
+* Comment on Jim timeline and evolution into 2020 - 2030s
+]
+]
+
+---
+# Analysis Reinterpretation
+
+.kol-1-2[
+.large[
+* Rivet, RECAST
+]
+]
+
+
+---
+# Software for future experiments
+
+.kol-2-3[
+.large[
+* In 2026 multiple .bold[future collider experiments] are exploring software studies:
+   - Circular Electron Positron Collider (CEPC)
+   - Compact Linear Collider (CLIC)
+   - Electron-Ion Collider (EIC)
+   - Future Circular Collider (FCC)
+   - International Linear Collider (ILC)
+   - Muon Collider
+* [Key4HEP](https://github.com/key4hep) provides .bold[common] libraries and solutions for the generation, simulation, reconstruction, and analysis
+]
+]
+.kol-1-3.center[
+<p style="text-align:center;">
+   <a href="https://key4hep.github.io/key4hep-doc/">
+      <img src="figures/key4hep-logo.png"; width=100%>
+   </a>
+</p>
+]
+
 
 ---
 class: end-slide, center
