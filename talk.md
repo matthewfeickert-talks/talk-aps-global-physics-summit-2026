@@ -43,6 +43,30 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 ]
 ]
 
+<!-- LHC information from Chris Burr:
+The highest level starting point we have is: https://lhcb-starterkit-run3.docs.cern.ch/first-analysis-steps/dataflow/
+
+"Allen" is this "GPU HLT1" step in the second box on the left.
+Moore is the "CPU HLT2" on the right of the buffer.
+The 10GB/s is being sent from point 8 to the grid.
+Which then leads to the offline processing section at the bottom of the page.
+"Moore" (the software) is then used to do a process we call "sprucing".
+Depending on the stream it's either:
+* Just a file format conversion (TURBO)
+* Running the an additional set of selections on top of the HLT2 selections (CALIB/FULL)
+Everything up to this point is "central productions" which are done for people (which analysts only providing selections).
+Then "Analysis Productions" typically involves running "DaVinci" to produce ROOT files of TTrees (soon to be ntuples) of candidates from the output of sprucing.
+We can also run other embarrassingly parallel processing in analysis productions e.g.
+* applying some ROOT RDataFrame workflow to every output file of DaVinci
+* Use uproot and XGBoost to apply a BDT
+* Run various calibration tools to add/transform columns
+This is just user provided code running in conda environments. The only constraint is that it can be ran on any subset of input files and then have the output merged. People also run analysis productions on the output of analysis productions, and there is a ton of re-use/metadata management. Everything is logged, reproducible, metadata and application logs are persisted forever, if output data is used for a paper we archive it to tape for long term preservation and all that kind of stuff.
+The analysis productions system reads about half an exabyte a year of input data.
+(Analysis Productions is my main project in LHCb)
+After analysis productions we aim to have processing fit on a single (potentially large) machine and then LHCb is very unopinionated. The ROOT files we write out doesn't have any custom types so you don't the LHCb physics software or dictionaries to read them.
+Snakemake is pretty popular but there is a long list of things people use, a ton of fitting frameworks, some people use ROOT lots, some people use the purely pyhep stuff, most people use a mixture.
+-->
+
 
 ---
 # Event Reconstruction & Pattern Recognition
