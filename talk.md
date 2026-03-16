@@ -52,6 +52,35 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 ]
 
 ---
+# Simulation
+
+.kol-1-2[
+.large[
+* **Physics event generators**
+   - MadGraph, Sherpa, Pythia, Herwig, EvtGen
+   - Hard process → parton shower → hadronization → decay
+* **Detector simulation**
+   - Geant4: the cornerstone
+* **Fast simulation** approaches
+   - Parametric: AtlFast, Delphes
+   - ML-based surrogates: FlashSim, CaloFlow
+]
+]
+.kol-1-2[
+<div class="figure-placeholder">
+   Recommended figure: Diagram showing the simulation chain from generator through detector simulation, or comparison of full vs. fast simulation output
+</div>
+]
+
+.large[
+HSF Generator WG coordinates efforts to improve generator efficiency
+]
+
+???
+Simulation is essential for interpreting experimental results, and it consumes roughly half of the global HEP computing budget. The chain starts with physics event generators — MadGraph and Sherpa for hard processes, Pythia and Herwig for parton showering and hadronization — and continues through Geant4 for detailed detector response simulation. Because full Geant4 simulation is so expensive, the community is actively pursuing fast simulation alternatives: parametric approaches like AtlFast and Delphes, and increasingly ML-based surrogates like CaloFlow for calorimeter simulation. The HSF Generator Working Group coordinates community-wide efforts to improve generator software efficiency, which is critical for the HL-LHC era.
+
+
+---
 # Data Acquisition & Trigger
 
 .kol-1-2[
@@ -146,35 +175,6 @@ Snakemake is pretty popular but there is a long list of things people use, a ton
 
 ???
 Once events pass the trigger, they must be reconstructed — turning raw detector hits into physics objects like tracks, jets, and leptons. This is the most computationally expensive step. Track reconstruction alone can dominate the CPU budget, which has motivated cross-experiment efforts like Acts — A Common Tracking Software — that provides a detector-agnostic, thread-safe, GPU-capable tracking library. Machine learning is increasingly being explored for reconstruction tasks, with graph neural networks showing promise for track finding in the dense environments expected at the HL-LHC.
-
-
----
-# Simulation
-
-.kol-1-2[
-.large[
-* **Physics event generators**
-   - MadGraph, Sherpa, Pythia, Herwig, EvtGen
-   - Hard process → parton shower → hadronization → decay
-* **Detector simulation**
-   - Geant4: the cornerstone
-* **Fast simulation** approaches
-   - Parametric: AtlFast, Delphes
-   - ML-based surrogates: FlashSim, CaloFlow
-]
-]
-.kol-1-2[
-<div class="figure-placeholder">
-   Recommended figure: Diagram showing the simulation chain from generator through detector simulation, or comparison of full vs. fast simulation output
-</div>
-]
-
-.large[
-HSF Generator WG coordinates efforts to improve generator efficiency
-]
-
-???
-Simulation is essential for interpreting experimental results, and it consumes roughly half of the global HEP computing budget. The chain starts with physics event generators — MadGraph and Sherpa for hard processes, Pythia and Herwig for parton showering and hadronization — and continues through Geant4 for detailed detector response simulation. Because full Geant4 simulation is so expensive, the community is actively pursuing fast simulation alternatives: parametric approaches like AtlFast and Delphes, and increasingly ML-based surrogates like CaloFlow for calorimeter simulation. The HSF Generator Working Group coordinates community-wide efforts to improve generator software efficiency, which is critical for the HL-LHC era.
 
 ---
 # End-user Analysis
