@@ -113,7 +113,7 @@ Snakemake is pretty popular but there is a long list of things people use, a ton
 
 
 ---
-# Event Reconstruction & Pattern Recognition
+# Event Reconstruction and Tracking
 
 .kol-1-2[
 .large[
