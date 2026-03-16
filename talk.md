@@ -105,9 +105,7 @@ Simulation is essential for interpreting experimental results, and it consumes r
 
 .kol-1-2[
 .large[
-* **Physics event generators**
-   - MadGraph, Sherpa, Pythia, Herwig, EvtGen
-   - Hard process → parton shower → hadronization → decay
+* Flavor tagging software across HEP
 ]
 ]
 
@@ -130,6 +128,14 @@ Simulation is essential for interpreting experimental results, and it consumes r
 ]
 ]
 
+---
+# Neutrino Physics specific
+
+.kol-1-2[
+.large[
+* DUNE things
+]
+]
 
 ---
 # Software for future experiments
@@ -147,7 +153,7 @@ Simulation is essential for interpreting experimental results, and it consumes r
 ]
 ]
 .kol-1-3.center[
-<div class="figure-vcenter" style="--top:50%;">
+<div class="figure-vcenter" style="--top:40%;">
    <a href="https://key4hep.github.io/key4hep-doc/">
       <img src="figures/key4hep-logo.png" width="100%">
    </a>
