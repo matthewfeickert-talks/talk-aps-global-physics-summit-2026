@@ -27,8 +27,8 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 ---
 # Overview
 
-.kol-2-3[
-.huge[
+.kol-3-5[
+.larger[
 * Robust and performant software is .bold[critical] to the high energy physics community
 * Reflect on the scope of the HEP software community
    - Current software
@@ -36,6 +36,16 @@ This talk will review the global HEP software ecosystem and discuss how it is us
    - Community support for future experiment software ecosystems
 * We'll start by following the data generating physics processes to cover the breadth
 ]
+]
+.kol-2-5.center[
+<div class="figure-vcenter" style="--top:40%;">
+   <figure>
+      <a href="https://cds.cern.ch/record/2802918">
+         <img src="figures/HL-LHC-cpu-projections-atlas_annotated.png" width="100%">
+      </a>
+      <figcaption>Experiments given software community<br><b>new challenges and opportunities</b>.<br>Projected required compute usage for HL-LHC <br>(want R&D below budget line)</figcaption>
+   </figure>
+</div>
 ]
 
 ---
