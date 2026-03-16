@@ -25,7 +25,7 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 -->
 
 ---
-# Introduction
+# Overview
 
 .kol-2-3[
 .huge[
