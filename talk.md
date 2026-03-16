@@ -117,10 +117,13 @@ Snakemake is pretty popular but there is a long list of things people use, a ton
 
 .kol-1-2[
 .large[
-* Track reconstruction, calorimeter clustering, particle flow
-* *Acts* (A Common Tracking Software)
-   - Cross-experiment tracking library
-   - GPU-accelerated track finding
+* Reconstruction, calorimeter clustering, particle flow
+* Track reconstruction
+   - [ACTS](https://github.com/acts-project/acts) (A Common Tracking Software) &nbsp;<a href="https://github.com/acts-project/acts"><img src="figures/acts-logo.svg" style="height:1.5em; vertical-align:middle;"></a>
+      - Cross-experiment tracking library
+      - GPU-accelerated track finding
+<!-- https://cds.cern.ch/record/2921878/ -->
+      - Integration into [ATLAS Athena](https://gitlab.cern.ch/atlas/athena)
 * ML-based reconstruction emerging
    - GNNs for tracking
    - ML-based jet calibration
