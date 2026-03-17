@@ -306,7 +306,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 .large[
 * Ever piece of software will eventually (ideally) be sunset (not a bad thing)
 * Projects like<a href="https://github.com/key4hep"><img src="figures/key4hep-logo.png" style="height:2.0em; vertical-align:middle;"></a> are able to build on the community open stack given those projects have .bold[long-term supported maintainers]
-   - Support form CERN EP-SFT and other areas sometimes taken as implicit assumption
+   - Support from CERN EP-SFT and other areas sometimes taken as implicit assumption
 * .bold[Maintainership] in contrast to .bold[developing] required for .bold[guiding projects] over multiple year (or decade) .bold[stages of software life cycle]
    - Cultivation of focus and support of maintainership ongoing topic for US .bold[Coordinating Panel for Software and Computing] (more in [Ian Fisk's 2026-03-18 talk](https://summit.aps.org/smt/2026/events/APR-P88/5))
 ]
