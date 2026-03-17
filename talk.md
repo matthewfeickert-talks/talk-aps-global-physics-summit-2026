@@ -225,7 +225,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
    </a>
 .code-large[
 * .bold[JuliaHEP]: New HSF Activity to explore the nascent ecosystem
-* Adopters in LEGEND, Belle II
+* Adopters across broader particle physics in LEGEND, ATLAS, Belle II
 ]
    </figure>
 </div>
@@ -269,7 +269,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
    - Future Circular Collider (FCC)
    - International Linear Collider (ILC)
    - Muon Collider
-* <a href="https://github.com/key4hep"><img src="figures/key4hep-logo.png" style="height:3.0em; vertical-align:middle;"></a>  provides .bold[common] libraries and solutions for the generation, simulation, reconstruction, and analysis
+* <a href="https://github.com/key4hep"><img src="figures/key4hep-logo.png" style="height:3.0em; vertical-align:middle;"></a>  provides .bold[common] libraries and solutions for the generation, simulation, reconstruction, and analysis to collider research community
 ]
 ]
 .kol-1-3.center[
@@ -303,7 +303,13 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 ---
 # A look towards community software
 
-* We should do it where we can
+.huge[
+* HEP software ecosystem is .bold[broad] by necessity to cover wide scope and scale
+* Despite breadth, through community engagement excellent .bold[solutions are shared]
+* .bold[Interoperability] is a huge boon that provides benefits across the stack
+   - In both developer experience and user experience
+* If development cycles can get faster (new languages paired with LLMs), should ensure .bold[community development and maintainership] of software to maximally scale these benefits
+]
 
 ---
 # Summary
