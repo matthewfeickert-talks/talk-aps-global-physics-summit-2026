@@ -465,7 +465,7 @@ td {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 550px;
+    height: var(--height, 550px);
     gap: 0.8em;
 }
 

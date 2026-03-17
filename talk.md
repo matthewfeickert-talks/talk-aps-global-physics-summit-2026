@@ -269,31 +269,31 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
    - Future Circular Collider (FCC)
    - International Linear Collider (ILC)
    - Muon Collider
-* <a href="https://github.com/key4hep"><img src="figures/key4hep-logo.png" style="height:1.6em; vertical-align:middle;"></a>  provides .bold[common] libraries and solutions for the generation, simulation, reconstruction, and analysis
+* <a href="https://github.com/key4hep"><img src="figures/key4hep-logo.png" style="height:3.0em; vertical-align:middle;"></a>  provides .bold[common] libraries and solutions for the generation, simulation, reconstruction, and analysis
 ]
 ]
 .kol-1-3.center[
 .bold[Builds on open community stack]
 
-<div class="figure-column">
+<div class="figure-column" style="--height:auto;">
 <figure>
    <a href="https://root.cern/">
-      <img src="figures/root-logo.svg"; width=70%>
+      <img src="figures/root-logo.svg"; width=80%>
    </a>
 </figure>
 <figure>
    <a href="https://cern.ch/geant4">
-      <img src="figures/geant4-logo.png"; width=80%>
+      <img src="figures/geant4-logo.png"; width=90%>
    </a>
 </figure>
 <figure>
    <a href="https://dd4hep.web.cern.ch/dd4hep/">
-      <img src="figures/dd4hep_logo.png"; width=25%>
+      <img src="figures/dd4hep_logo.png"; width=30%>
    </a>
 </figure>
 <figure>
    <a href="https://gaudi.web.cern.ch/gaudi/">
-      <img src="figures/gaudilogo-logo.png"; width=25%>
+      <img src="figures/gaudilogo-logo.png"; width=30%>
    </a>
 </figure>
 
