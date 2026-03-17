@@ -296,9 +296,10 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 
 <p style="text-align:center;">
    <a href="https://www.linuxfoundation.org/blog/blog/the-lifecycles-of-open-source-projects">
-      <img src="figures/lifecycles-of-an-open-source-project.png"; width=70%>
+      <img src="figures/lifecycles-of-an-open-source-project.svg"; width=90%>
    </a>
 </p>
+<!-- .center[Open source software project life cycle as thought of by The Linux Foundation] -->
 
 .large[
 * Ever piece of software will eventually (ideally) be sunset (not a bad thing)
