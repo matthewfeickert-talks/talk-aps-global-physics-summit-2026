@@ -182,31 +182,51 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 ---
 # End-user Analysis
 
+.large[End-user analysis software ranges broadly across HEP given multitude of use cases]
+
 .kol-1-3[
-<div class="figure-vcenter" style="--top:40%;">
+<div class="figure-vcenter" style="--top:50%;">
    <figure>
    <a href="https://root.cern/">
       <img src="figures/root-logo.svg"; width=95%>
    </a>
+   <br>
+.code-large[
+* Large and rich ecosystem of C++ tools across field
+* <a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> provides strong common backbone
+]
    </figure>
 </div>
+<!-- <figure>
+   <a href="https://root.cern/">
+      <img src="figures/root-logo.svg" width="95%">
+   </a>
+</figure> -->
 ]
 .kol-1-3[
-<div class="figure-vcenter" style="--top:40%;">
+<div class="figure-vcenter" style="--top:45%;">
    <figure>
    <a href="https://scikit-hep.org/">
       <img src="figures/pyhep-ecosystem.svg"; width=95%>
    </a>
+   <br>
+.code-large[
+* .bold[PyHEP]: Pythonic ecosystem aimed at reducing analyst time to insight
+* Interoperable with broader Scientific Python ecosystem
+]
    </figure>
 </div>
 ]
 .kol-1-3[
-<div class="figure-vcenter" style="--top:40%;">
+<div class="figure-vcenter" style="--top:45%;">
    <figure>
    <a href="https://www.juliahep.org/">
       <img src="figures/julia-hep-logo.png"; width=80%>
    </a>
-      <figcaption>JuliaHEP</figcaption>
+.code-large[
+* .bold[JuliaHEP]: New HSF Activity to explore the nascent ecosystem
+* Adopters in LEGEND, Belle II
+]
    </figure>
 </div>
 ]
@@ -223,8 +243,8 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 .center.large[Language transitions in the field (so far) ([Jim Pivarksi, 2022](https://indico.jlab.org/event/505/contributions/9207/))]
 
 .large[
-* C++ exists still as the common language today for the field
-* End-user analysis software ranges broadly across HEP and beyond &nbsp;<a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> being a ubiquitous dependency, there is a wide spread of tooling
+* C++ exists still as <s>the</s> a .bold[common language] today for the field
+<!-- * End-user analysis software ranges broadly across HEP and beyond &nbsp;<a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> being a ubiquitous dependency, there is a wide spread of tooling -->
 * 2030s: Perhaps a different ecosystem view with modern languages (Rust, Julia) becoming more commonplace with the rise of LLMs in scientific software
 ]
 
