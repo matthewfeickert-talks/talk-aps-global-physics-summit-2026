@@ -34,6 +34,7 @@ This talk will review the global HEP software ecosystem and discuss how it is us
    - Current software
    - Ongoing work to support experiments
    - .bold[Community support] for future software ecosystems and experiments
+* Given time focusing on opinionated examples (not comprehensive)
 <!-- * We'll start by following the data generating physics processes to cover the breadth -->
 ]
 ]
@@ -324,8 +325,12 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 ---
 # Summary
 
-* Outlook
-
+.huge[
+* HEP software ecosystem is broad, robust, and innovating
+* Ecosystem is engaging with community software and broader open source scientific software to leverage opportunities new tools and compute
+* In 50+ year history have found success in broader community projects
+* Supported maintainership roles can be critical to continued success
+]
 
 ---
 class: end-slide, center
