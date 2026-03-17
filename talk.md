@@ -326,7 +326,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 # Summary
 
 .huge[
-* HEP software ecosystem is broad, robust, and innovating
+<!-- * HEP software ecosystem is broad, robust, and innovating -->
 * Ecosystem is engaging with community software and broader open source scientific software to leverage opportunities new tools and compute
 * In 50+ year history have found success in broader community projects
 * Supported maintainership roles can be critical to continued success
