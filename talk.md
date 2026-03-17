@@ -232,7 +232,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 ]
 
 ---
-# End-user Analysis
+# Languages for future software
 
 <p style="text-align:center;">
    <a href="https://indico.jlab.org/event/505/contributions/9207/">
@@ -245,7 +245,8 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 .large[
 * C++ exists still as <s>the</s> a .bold[common language] today for the field
 <!-- * End-user analysis software ranges broadly across HEP and beyond &nbsp;<a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> being a ubiquitous dependency, there is a wide spread of tooling -->
-* 2030s: Perhaps a different ecosystem view with modern languages (Rust, Julia) becoming more commonplace with the rise of LLMs in scientific software
+* 2030s: Perhaps a .bold[different ecosystem view] with modern languages (Rust, Julia) becoming more commonplace with the rise of LLMs / machine learning-based assistive tools in scientific software development
+* Will need to .bold[balance] innovation with long-term maintainability
 ]
 
 ---
