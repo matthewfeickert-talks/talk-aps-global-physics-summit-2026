@@ -269,16 +269,34 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
    - Future Circular Collider (FCC)
    - International Linear Collider (ILC)
    - Muon Collider
-* [Key4HEP](https://github.com/key4hep) provides .bold[common] libraries and solutions for the generation, simulation, reconstruction, and analysis
+* <a href="https://github.com/key4hep"><img src="figures/key4hep-logo.png" style="height:1.6em; vertical-align:middle;"></a>  provides .bold[common] libraries and solutions for the generation, simulation, reconstruction, and analysis
 ]
 ]
 .kol-1-3.center[
-<div class="figure-vcenter" style="--top:40%;">
-   <figure>
-      <a href="https://key4hep.github.io/key4hep-doc/">
-         <img src="figures/key4hep-logo.png" width="100%">
-      </a>
-   </figure>
+.bold[Builds on open community stack]
+
+<div class="figure-column">
+<figure>
+   <a href="https://root.cern/">
+      <img src="figures/root-logo.svg"; width=70%>
+   </a>
+</figure>
+<figure>
+   <a href="https://cern.ch/geant4">
+      <img src="figures/geant4-logo.png"; width=80%>
+   </a>
+</figure>
+<figure>
+   <a href="https://dd4hep.web.cern.ch/dd4hep/">
+      <img src="figures/dd4hep_logo.png"; width=25%>
+   </a>
+</figure>
+<figure>
+   <a href="https://gaudi.web.cern.ch/gaudi/">
+      <img src="figures/gaudilogo-logo.png"; width=25%>
+   </a>
+</figure>
+
 </div>
 ]
 
