@@ -182,7 +182,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 ---
 # End-user Analysis
 
-.large[End-user analysis software ranges broadly across HEP given multitude of use cases]
+.large.center[End-user analysis software ranges broadly across HEP given multitude of use cases]
 
 .kol-1-3[
 <div class="figure-vcenter" style="--top:50%;">
@@ -225,7 +225,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
    </a>
 .code-large[
 * .bold[JuliaHEP]: New HSF Activity to explore the nascent ecosystem
-* Adopters across broader particle physics in LEGEND, ATLAS, Belle II
+* Adopters across broader particle physics in LEGEND, ATLAS, KM3Net
 ]
    </figure>
 </div>
@@ -246,15 +246,6 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 * C++ exists still as <s>the</s> a .bold[common language] today for the field
 <!-- * End-user analysis software ranges broadly across HEP and beyond &nbsp;<a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> being a ubiquitous dependency, there is a wide spread of tooling -->
 * 2030s: Perhaps a different ecosystem view with modern languages (Rust, Julia) becoming more commonplace with the rise of LLMs in scientific software
-]
-
----
-# Analysis Reinterpretation
-
-.kol-1-2[
-.large[
-* Rivet, RECAST
-]
 ]
 
 ---
@@ -301,6 +292,15 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 ]
 
 ---
+# Software life cycles
+
+.kol-1-2[
+.large[
+* Rivet, RECAST
+]
+]
+
+---
 # A look towards community software
 
 .huge[
@@ -321,6 +321,28 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 class: end-slide, center
 
 .large[Backup]
+
+---
+# JuliaHEP growing community
+
+<br>
+.kol-1-2[
+.large[
+* LEGEND: Julia based software stack in parallel to C++ and Python
+* KM3Net (Cubic Kilometre Neutrino Telescope)
+* DUNE: TPC reco study and visualization
+* IceCube
+* TAMBO ([arXiv:2507.08070](https://arxiv.org/abs/2507.08070))
+]
+]
+.kol-1-2[
+<div class="figure-vcenter" style="--top:30%;">
+   <figure>
+   <a href="https://www.juliahep.org/">
+      <img src="figures/julia-hep-logo.png"; width=80%>
+   </a>
+</div>
+]
 
 ---
 # Flavour tagging
