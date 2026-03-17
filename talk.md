@@ -28,13 +28,13 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 # Overview
 
 .kol-3-5[
-.larger[
+.huge[
 * Robust and performant software is .bold[critical] to the high energy physics community
 * Reflect on the scope of the HEP software community
    - Current software
    - Ongoing work to support experiments
-   - Community support for future experiment software ecosystems
-* We'll start by following the data generating physics processes to cover the breadth
+   - .bold[Community support] for future software ecosystems and experiments
+<!-- * We'll start by following the data generating physics processes to cover the breadth -->
 ]
 ]
 .kol-2-5.center.large[
