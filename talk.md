@@ -88,7 +88,7 @@ Simulation is essential for interpreting experimental results, and it consumes r
 .kol-1-2[
 .code-large[
 * Trigger systems bring event rates from data source to manageable levels for readout
-   - At LHC: 40 MHz beam crossing to $O$(10 MHz)
+   - At LHC: 40 MHz beam crossing to $O$(kHz)
 * In LHC experiments see exploitation of .bold[heterogeneous computing] in trigger to increase computing power
    - ATLAS: [AthenaMT](https://atlas.cern/updates/briefing/renovating-athena) (multithreaded framework)
    <!-- https://indico.cern.ch/event/1361472/contributions/5972904/ -->
@@ -318,7 +318,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 * Despite breadth, through community engagement excellent .bold[solutions are shared]
 * .bold[Interoperability] is a huge boon that provides benefits across the stack
    - In both developer experience and user experience
-* If development cycles can get faster (new languages paired with LLMs), should ensure .bold[community development and maintainership] of software to maximally scale these benefits
+* If development cycles can get faster (new languages paired with new tools), should ensure .bold[community development and maintainership] of software to maximally scale these benefits
 ]
 
 ---
