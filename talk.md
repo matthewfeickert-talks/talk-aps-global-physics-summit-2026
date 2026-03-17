@@ -181,11 +181,18 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 ---
 # End-user Analysis
 
-.kol-1-2[
+<p style="text-align:center;">
+   <a href="https://indico.jlab.org/event/505/contributions/9207/">
+      <img src="figures/hep-programming-language-history.png"; width=90%>
+   </a>
+</p>
+
+.center.large[Language transitions in the field (so far) ([Jim Pivarksi, 2022](https://indico.jlab.org/event/505/contributions/9207/))]
+
 .large[
-* Show multilingual story here
-* Comment on Jim timeline and evolution into 2020 - 2030s
-]
+* C++ exists still as the common language today for the field
+* End-user analysis software ranges broadly across HEP and beyond &nbsp;<a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> being a ubiquitous dependency, there is a wide spread of tooling
+* 2030s: Perhaps a different ecosystem view with modern languages becoming more commonplace with the rise of LLMs in scientific software
 ]
 
 ---
