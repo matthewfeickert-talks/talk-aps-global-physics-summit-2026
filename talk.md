@@ -47,7 +47,7 @@ This talk will review the global HEP software ecosystem and discuss how it is us
       <a href="https://cds.cern.ch/record/2815292">
          <img src="figures/HL-LHC-cpu-projections-cms.png" width="100%">
       </a>
-      <figcaption>Experiments given software community<br><b>new challenges and opportunities</b>.<br>Projected required compute usage for HL-LHC <br>(want R&D below budget line)</figcaption>
+      <figcaption>Experiments give software community<br><b>new challenges and opportunities</b>.<br>Projected required compute usage for HL-LHC <br>(want R&D below budget line)</figcaption>
    </figure>
 </div>
 ]
@@ -57,7 +57,7 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 
 .kol-2-5[
 .code-large[
-* Excellent fidelity simulation is .bold[critical] for all other components of physics
+* High fidelity simulation is .bold[critical] for all other components of physics
 * .bold[Physics event generator]:<br>Hard process, showering, hadronization, decay
    - MadGraph5_aMC@NLO, Pythia, Sherpa, Herwig, EvtGen
 * .bold[Detector simulation] with [Geant4](https://cern.ch/geant4)
@@ -255,7 +255,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 
 .kol-2-3[
 .large[
-* In 2026 multiple .bold[future collider experiments] are exploring software studies:
+* In 2026 multiple .bold[future collider experiments] performing software studies:
    - Circular Electron Positron Collider (CEPC)
    - Compact Linear Collider (CLIC)
    - Electron-Ion Collider (EIC)
