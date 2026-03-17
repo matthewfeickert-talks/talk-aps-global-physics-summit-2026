@@ -178,6 +178,39 @@ Snakemake is pretty popular but there is a long list of things people use, a ton
 ???
 Once events pass the trigger, they must be reconstructed — turning raw detector hits into physics objects like tracks, jets, and leptons. This is the most computationally expensive step. Track reconstruction alone can dominate the CPU budget, which has motivated cross-experiment efforts like Acts — A Common Tracking Software — that provides a detector-agnostic, thread-safe, GPU-capable tracking library. Machine learning is increasingly being explored for reconstruction tasks, with graph neural networks showing promise for track finding in the dense environments expected at the HL-LHC.
 
+
+---
+# End-user Analysis
+
+.kol-1-3[
+<div class="figure-vcenter" style="--top:40%;">
+   <figure>
+   <a href="https://root.cern/">
+      <img src="figures/root-logo.svg"; width=95%>
+   </a>
+   </figure>
+</div>
+]
+.kol-1-3[
+<div class="figure-vcenter" style="--top:40%;">
+   <figure>
+   <a href="https://scikit-hep.org/">
+      <img src="figures/pyhep-ecosystem.svg"; width=95%>
+   </a>
+   </figure>
+</div>
+]
+.kol-1-3[
+<div class="figure-vcenter" style="--top:40%;">
+   <figure>
+   <a href="https://www.juliahep.org/">
+      <img src="figures/julia-hep-logo.png"; width=80%>
+   </a>
+      <figcaption>JuliaHEP</figcaption>
+   </figure>
+</div>
+]
+
 ---
 # End-user Analysis
 
@@ -192,7 +225,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 .large[
 * C++ exists still as the common language today for the field
 * End-user analysis software ranges broadly across HEP and beyond &nbsp;<a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> being a ubiquitous dependency, there is a wide spread of tooling
-* 2030s: Perhaps a different ecosystem view with modern languages becoming more commonplace with the rise of LLMs in scientific software
+* 2030s: Perhaps a different ecosystem view with modern languages (Rust, Julia) becoming more commonplace with the rise of LLMs in scientific software
 ]
 
 ---
@@ -201,15 +234,6 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 .kol-1-2[
 .large[
 * Rivet, RECAST
-]
-]
-
----
-# Neutrino Physics specific
-
-.kol-1-2[
-.large[
-* DUNE things
 ]
 ]
 
@@ -260,6 +284,15 @@ class: end-slide, center
 .kol-1-2[
 .large[
 * Flavor tagging software across HEP
+]
+]
+
+---
+# Neutrino Physics specific
+
+.kol-1-2[
+.large[
+* DUNE things
 ]
 ]
 
