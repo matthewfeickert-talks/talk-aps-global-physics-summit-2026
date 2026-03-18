@@ -308,7 +308,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 
 .large[
 * Ever piece of software will eventually (ideally) be sunset (not a bad thing)
-* Projects like<a href="https://github.com/key4hep"><img src="figures/key4hep-logo.png" style="height:2.0em; vertical-align:middle;"></a> are able to build on the community open stack given those projects have .bold[long-term supported maintainers]
+* Projects like key4hep are able to build on the community open stack given those projects have .bold[long-term supported maintainers]
    - Support from CERN EP-SFT and other areas sometimes taken as implicit assumption
 * .bold[Maintainership] in contrast to .bold[developing] required for .bold[guiding projects] over multiple year (or decade) .bold[stages of software life cycle]
    - Cultivation of focus and support of maintainership ongoing topic for US .bold[Coordinating Panel for Software and Computing] (more in [Ian Fisk's 2026-03-18 talk](https://summit.aps.org/smt/2026/events/APR-P88/5))
@@ -357,6 +357,23 @@ class: end-slide, center
    </a>
 </div>
 ]
+
+---
+# Software life cycles
+
+<p style="text-align:center;">
+   <a href="https://www.linuxfoundation.org/blog/blog/the-lifecycles-of-open-source-projects">
+      <img src="figures/lifecycles-of-an-open-source-project.svg"; width=90%>
+   </a>
+</p>
+
+.center[[The Life Cycles of Open Source Projects, The Linux Foundation](https://www.linuxfoundation.org/blog/blog/the-lifecycles-of-open-source-projects)]
+
+* .bold[Proposal]: Where a specific need is identified, planning preparations for resources and work
+* .bold[Incubation]: Proposal is approved, resources are assigned, early development.
+* .bold[Mature]: Several successful releases and on track with vision.
+* .bold[Core]: Reached a broad audience due to its value. Teams need to focus on maintaining and keeping the pace steady.
+* .bold[Archived]: Good: Project has reached its goal. Bad: Unforeseen circumstances (bitrot).
 
 ---
 # Flavour tagging
