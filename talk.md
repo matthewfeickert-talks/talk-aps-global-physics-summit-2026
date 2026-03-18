@@ -100,7 +100,7 @@ Simulation is essential for interpreting experimental results, and it consumes r
 * ATLAS and LHCb both build on the [GAUDI](https://inspirehep.net/literature/568472) &nbsp;<a href="https://gaudi.web.cern.ch/gaudi/"><img src="figures/gaudilogo-logo.png" style="height:1.4em; vertical-align:middle;"></a> event data processing framework
 <!-- https://indico.cern.ch/event/1291023/contributions/5866459/ -->
 <!-- TODO: Explain what software systems -->
-* DUNE TDAQ (data reduction of $O(10^4)$)
+<!-- * DUNE TDAQ (data reduction of $O(10^4)$) -->
 ]
 ]
 .kol-1-2.center[
