@@ -187,23 +187,17 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 .large.center[End-user analysis software ranges broadly across HEP given multitude of use cases]
 
 .kol-1-3[
-<div class="figure-vcenter" style="--top:50%;">
+<div class="figure-vcenter" style="--top:55%;">
    <figure>
    <a href="https://root.cern/">
       <img src="figures/root-logo.svg"; width=95%>
    </a>
-   <br>
 .code-large[
 * Large and rich ecosystem of C++ tools across field
 * <a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> provides strong common backbone
 ]
    </figure>
 </div>
-<!-- <figure>
-   <a href="https://root.cern/">
-      <img src="figures/root-logo.svg" width="95%">
-   </a>
-</figure> -->
 ]
 .kol-1-3[
 <div class="figure-vcenter" style="--top:45%;">
@@ -211,7 +205,6 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
    <a href="https://scikit-hep.org/">
       <img src="figures/pyhep-ecosystem.svg"; width=95%>
    </a>
-   <br>
 .code-large[
 * .bold[PyHEP]: Pythonic ecosystem aimed at reducing analyst time to insight
 * Interoperable with broader Scientific Python ecosystem
@@ -220,12 +213,11 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 </div>
 ]
 .kol-1-3[
-<div class="figure-vcenter" style="--top:45%;">
+<div class="figure-vcenter" style="--top:55%;">
    <figure>
    <a href="https://www.juliahep.org/">
       <img src="figures/julia-hep-with-julia-logo.png"; width=100%>
    </a>
-<br><br>
 .code-large[
 * .bold[JuliaHEP]: New HSF Activity to explore the nascent ecosystem
 * Adopters across broader particle physics in LEGEND, ATLAS, KM3Net
