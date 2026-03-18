@@ -95,7 +95,7 @@ Simulation is essential for interpreting experimental results, and it consumes r
    - ATLAS: [AthenaMT](https://atlas.cern/updates/briefing/renovating-athena) (multithreaded framework)
    <!-- https://indico.cern.ch/event/1361472/contributions/5972904/ -->
    - CMS: GPU-accelerated reconstruction in HLT with Pixel, HCAL, ECAL code running on CUDA-enabled GPUs using &nbsp;<a href="https://github.com/alpaka-group/alpaka/"><img src="figures/alpaka-logo.svg" style="height:1.2em; vertical-align:middle;"></a>
-   - LHCb: Allen &mdash; Fully GPU-based HLT1 <br>([Comput Softw Big Sci 4, 7 (2020)](https://doi.org/10.1007/s41781-020-00039-7))
+   - LHCb: [Allen](https://gitlab.cern.ch/lhcb/Allen) &mdash; Fully GPU-based HLT1 <br>([Comput Softw Big Sci 4, 7 (2020)](https://doi.org/10.1007/s41781-020-00039-7))
 <!-- TODO: Explain what Gaudi is -->
 * ATLAS and LHCb both build on the [GAUDI](https://inspirehep.net/literature/568472) &nbsp;<a href="https://gaudi.web.cern.ch/gaudi/"><img src="figures/gaudilogo-logo.png" style="height:1.4em; vertical-align:middle;"></a> event data processing framework
 <!-- https://indico.cern.ch/event/1291023/contributions/5866459/ -->
