@@ -29,7 +29,7 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 
 .kol-3-5[
 .huge[
-* Robust and performant software is .bold[critical] to the high energy physics community
+* Robust and performant software needed by the high energy physics community
 * Reflect on the scope of the HEP software community
    - Current software
    - Ongoing work to support experiments
