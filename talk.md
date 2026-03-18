@@ -223,8 +223,9 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 <div class="figure-vcenter" style="--top:45%;">
    <figure>
    <a href="https://www.juliahep.org/">
-      <img src="figures/julia-hep-logo.png"; width=80%>
+      <img src="figures/julia-hep-with-julia-logo.png"; width=100%>
    </a>
+<br><br>
 .code-large[
 * .bold[JuliaHEP]: New HSF Activity to explore the nascent ecosystem
 * Adopters across broader particle physics in LEGEND, ATLAS, KM3Net
@@ -356,7 +357,7 @@ class: end-slide, center
 <div class="figure-vcenter" style="--top:30%;">
    <figure>
    <a href="https://www.juliahep.org/">
-      <img src="figures/julia-hep-logo.png"; width=80%>
+      <img src="figures/julia-hep-with-julia-logo.png"; width=100%>
    </a>
 </div>
 ]
