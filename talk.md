@@ -109,7 +109,7 @@ Simulation is essential for interpreting experimental results, and it consumes r
    <a href="https://lhcb-starterkit-run3.docs.cern.ch/first-analysis-steps/dataflow/">
       <img src="figures/lhcb_online_dataflow.png" width="100%">
    </a>
-   <figcaption>LHCb's "Allen" GPU HLT1 and "Moore" CPU HLT2 with the Moore software bring trigger rate to 30 MHz</figcaption>
+   <figcaption>LHCb's "Allen" GPU HLT1 and "Moore" CPU HLT2 with the Moore software bring trigger rate down to 1 MHz and 12.5 kHz</figcaption>
 </figure>
 <figure style="--width:100%;">
    <a href="https://cds.cern.ch/record/2914421">
