@@ -65,6 +65,7 @@ This talk will review the global HEP software ecosystem and discuss how it is us
    - Parametric: Delphes
    - ML-based surrogates: [FlashSim](https://cds.cern.ch/record/2858890)
    - Combination: AtlFast3
+   - Trade-off CPU for GPU: [Celeritas](https://celeritas-project.github.io/celeritas/)
 ]
 ]
 .kol-3-5[
