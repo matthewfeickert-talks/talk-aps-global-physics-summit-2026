@@ -368,24 +368,6 @@ class: end-slide, center
 * .bold[Archived]: Good: Project has reached its goal. Bad: Unforeseen circumstances (bitrot).
 
 ---
-# Flavour tagging
-
-.kol-1-2[
-.large[
-* Flavor tagging software across HEP
-]
-]
-
----
-# Neutrino Physics specific
-
-.kol-1-2[
-.large[
-* DUNE things
-]
-]
-
----
 
 class: end-slide, center
 count: false
