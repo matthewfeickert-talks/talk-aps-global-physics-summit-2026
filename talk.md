@@ -194,7 +194,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
       <img src="figures/root-logo.svg"; width=95%>
    </a>
 .code-large[
-* Large and rich ecosystem of C++ tools across field
+* .bold[C++ tools]: Large and rich ecosystem across field
 * <a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> provides strong common backbone
 ]
    </figure>
