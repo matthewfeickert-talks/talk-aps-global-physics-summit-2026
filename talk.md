@@ -155,7 +155,7 @@ Snakemake is pretty popular but there is a long list of things people use, a ton
 * Rise of ML-based reconstruction methods
    - DUNE: CNNs for vertex finding
    - ATLAS: Pursuing GNNs for tracking (benefitting from ACTS)
-   - CMS: Track seed filtering in HLT
+   - CMS: CNN-based track seed filtering in HLT
    <!-- TODO: Get reference -->
    - ML-based jet calibration at LHC experiments
 ]
