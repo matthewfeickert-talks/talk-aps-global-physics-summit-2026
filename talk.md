@@ -93,7 +93,7 @@ Simulation is essential for interpreting experimental results, and it consumes r
 .code-large[
 * Trigger systems bring event rates from data source to manageable levels for readout
    - At LHC: 40 MHz beam crossing to $O$(kHz)
-* In LHC experiments see exploitation of .bold[heterogeneous computing] in trigger to increase computing power
+* In LHC experiments see exploitation of .bold[heterogeneous computing]
    - ATLAS: [AthenaMT](https://atlas.cern/updates/briefing/renovating-athena) (multithreaded framework)
    <!-- https://indico.cern.ch/event/1361472/contributions/5972904/ -->
    - CMS: GPU-accelerated reconstruction in HLT with Pixel, HCAL, ECAL code running on CUDA-enabled GPUs using &nbsp;<a href="https://github.com/alpaka-group/alpaka/"><img src="figures/alpaka-logo.svg" style="height:1.2em; vertical-align:middle;"></a>
@@ -155,8 +155,8 @@ Snakemake is pretty popular but there is a long list of things people use, a ton
 * CPU intensive event reconstruction software generally experiment specific frameworks given all steps (tracking to calorimeter clustering to physics object reconstruction)
 * Rise of ML-based reconstruction methods
    - DUNE: CNNs for vertex finding
-   - ATLAS: Pursuing GNNs for tracking (benefitting from ACTS)
    - CMS: CNN-based track seed filtering in HLT
+   - ATLAS: Pursuing GNNs for tracking (benefitting from ACTS)
    <!-- TODO: Get reference -->
    - ML-based jet calibration at LHC experiments
 ]
