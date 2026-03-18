@@ -263,7 +263,8 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
    - Future Circular Collider (FCC)
    - International Linear Collider (ILC)
    - Muon Collider
-* <a href="https://github.com/key4hep"><img src="figures/key4hep-logo.png" style="height:3.0em; vertical-align:middle;"></a>  provides .bold[common] libraries and solutions for the generation, simulation, reconstruction, and analysis to collider research community
+* Efforts on-going to provide .bold[common software] solutions for the collider research community
+   - Example:<a href="https://github.com/key4hep"><img src="figures/key4hep-logo.png" style="height:3.0em; vertical-align:middle;"></a>  provides common libraries for generation, simulation, reconstruction, and analysis
 ]
 ]
 .kol-1-3.center[
