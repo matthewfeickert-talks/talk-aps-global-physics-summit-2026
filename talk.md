@@ -62,7 +62,8 @@ This talk will review the global HEP software ecosystem and discuss how it is us
    - MadGraph5_aMC@NLO, Pythia, Sherpa, Herwig, EvtGen
 * .bold[Detector simulation] with [Geant4](https://cern.ch/geant4)
 * .bold[Fast simulation] approaches to decrease CPU
-   - Parametric: Delphes
+   <!-- TODO: Note how parameterized -->
+   - Parameterized: Delphes
    - ML-based surrogates: [FlashSim](https://cds.cern.ch/record/2858890)
    - Combination: AtlFast3
    - Trade-off CPU for GPU: [Celeritas](https://celeritas-project.github.io/celeritas/)
