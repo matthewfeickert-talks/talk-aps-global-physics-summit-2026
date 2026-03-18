@@ -315,7 +315,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 ]
 
 ---
-# A look towards community software
+# Summary: A look towards community software
 
 .huge[
 * HEP software ecosystem is .bold[broad] by necessity to cover wide scope and scale
@@ -325,15 +325,11 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 * If development cycles can get faster (new languages paired with new tools), should ensure .bold[community development and maintainership] of software to maximally scale these benefits
 ]
 
----
-# Summary
-
-.huge[
-<!-- * HEP software ecosystem is broad, robust, and innovating -->
+<!-- .huge[
 * Ecosystem is engaging with community software and broader open source scientific software to leverage opportunities new tools and compute
 * In 50+ year history have found success in broader community projects
 * Supported maintainership roles can be critical to continued success
-]
+] -->
 
 ---
 class: end-slide, center
