@@ -304,7 +304,7 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 * Projects like key4hep are able to build on the community open stack given those projects have .bold[supported long-term maintainers]
    - Support from CERN EP-SFT and other areas sometimes taken as implicit assumption
 * .bold[Maintainership] in contrast to .bold[developing] required for .bold[guiding projects] over multiple year (or decade) .bold[stages of software life cycle]
-   - Cultivation of focus and support of maintainership ongoing topic for US .bold[Coordinating Panel for Software and Computing] (more in [Ian Fisk's 2026-03-18 talk](https://summit.aps.org/smt/2026/events/APR-P88/5))
+   - Cultivation of focus and support of maintainership ongoing topic for APS DPF .bold[Coordinating Panel for Software and Computing] (more in [Ian Fisk's 2026-03-18 talk](https://summit.aps.org/smt/2026/events/APR-P88/5))
 ]
 
 ---
