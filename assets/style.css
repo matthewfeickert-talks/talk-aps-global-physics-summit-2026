@@ -448,6 +448,10 @@ td {
     text-align: center;
 }
 
+.figure-vcenter > figure ul {
+    text-align: left;
+}
+
 .figure-vcenter > figure > figcaption {
     margin-top: 0.4em;
     font-size: 0.8em;
