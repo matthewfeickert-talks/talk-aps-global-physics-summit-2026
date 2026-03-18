@@ -70,6 +70,7 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 ]
 ]
 .kol-3-5[
+<br>
 $$
 p\left(x \middle|\theta\right) = \int dz\_{D} dz\_{S} dz\_{P} \\, p\left(x \middle|z\_{D}\right) p\left(z\_{D} \middle|z\_{S}\right) p\left(z\_{S} \middle|z\_{P}\right) p\left(z\_{P} \middle|\theta\right)
 $$
