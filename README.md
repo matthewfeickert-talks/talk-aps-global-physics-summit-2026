@@ -2,6 +2,8 @@
 
 Talk on the HEP software ecosystem applications at the [2026 APS Global Physics Summit](https://summit.aps.org/events/APR-P88/2)
 
+[![DOI](https://zenodo.org/badge/1182951307.svg)](https://doi.org/10.5281/zenodo.19897936)
+
 ## Abstract
 
 Particle physics relies on an expansive ecosystem of software tools to accomplish all aspects of the work needed to deliver physics results.
@@ -15,3 +17,17 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 ## Acknowledgments
 
 This work was supported by the National Science Foundation under Cooperative Agreement PHY-2323298.
+
+## Citation
+
+```
+@software{matthew_feickert_aps_global_summit_2026,
+  author       = {Matthew Feickert},
+  title        = {{The HEP Software Ecosystem}},
+  month        = apr,
+  year         = 2026,
+  version      = {aps-global-physics-summit-2026},
+  doi          = {10.5281/zenodo.19897936},
+  url          = {https://doi.org/10.5281/zenodo.19897936},
+}
+```
