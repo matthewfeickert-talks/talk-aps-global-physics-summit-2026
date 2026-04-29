@@ -4,5 +4,5 @@ talk.pdf
 example_code/plots/
 
 # pixi environments
-.pixi
-*.egg-info
+.pixi/*
+!.pixi/config.toml

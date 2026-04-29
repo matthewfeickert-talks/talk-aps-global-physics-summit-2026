@@ -25,18 +25,333 @@ This talk will review the global HEP software ecosystem and discuss how it is us
 -->
 
 ---
-# Introduction
+# Overview
+
+.kol-3-5[
+.huge[
+* Robust and performant software needed by the high energy physics community
+* Reflect on the scope of the HEP software community
+   - Current software
+   - Ongoing work to support experiments
+   - .bold[Community support] for future software ecosystems and experiments
+* Given time focusing on opinionated examples (not comprehensive)
+<!-- * We'll start by following the data generating physics processes to cover the breadth -->
+]
+]
+.kol-2-5.center.large[
+<div class="figure-vcenter" style="--top:42%;">
+   <figure>
+      <a href="https://cds.cern.ch/record/2802918">
+         <img src="figures/HL-LHC-cpu-projections-atlas_annotated.png" width="100%">
+      </a>
+      <a href="https://cds.cern.ch/record/2815292">
+         <img src="figures/HL-LHC-cpu-projections-cms.png" width="100%">
+      </a>
+      <figcaption>Experiments give software community<br><b>new challenges and opportunities</b>.<br>Projected required compute usage for HL-LHC <br>(want R&D below budget line)</figcaption>
+   </figure>
+</div>
+]
+
+---
+# Simulation
+
+.kol-2-5[
+.code-large[
+* High fidelity simulation is .bold[critical] for all other components of physics
+* .bold[Physics event generator]:<br>Hard process, showering, hadronization, decay
+   - MadGraph5_aMC@NLO, Pythia, Sherpa, Herwig, EvtGen
+* .bold[Detector simulation] with [Geant4](https://cern.ch/geant4)
+* .bold[Fast simulation] approaches to decrease CPU
+   <!-- TODO: Note how parameterized -->
+   - Parameterized: Delphes
+   - ML-based surrogates: [FlashSim](https://cds.cern.ch/record/2858890)
+   - Combination: AtlFast3
+   - Trade-off CPU for GPU: [Celeritas](https://celeritas-project.github.io/celeritas/)
+]
+]
+.kol-3-5[
+<br>
+$$
+p\left(x \middle|\theta\right) = \int dz\_{D} dz\_{S} dz\_{P} \\, p\left(x \middle|z\_{D}\right) p\left(z\_{D} \middle|z\_{S}\right) p\left(z\_{S} \middle|z\_{P}\right) p\left(z\_{P} \middle|\theta\right)
+$$
+<p style="text-align:center;">
+   <a href="https://arxiv.org/abs/1911.01429">
+      <img src="figures/prediction-simulation-chain.png"; width=100%>
+   </a>
+</p>
+]
+
+---
+# Data Acquisition & Trigger
+
+.kol-1-2[
+.code-large[
+* Trigger systems bring event rates from data source to manageable levels for readout
+   - At LHC: 40 MHz beam crossing to $O$(kHz)
+* In LHC experiments see exploitation of .bold[heterogeneous computing]
+   - ATLAS: [AthenaMT](https://atlas.cern/updates/briefing/renovating-athena) (multithreaded framework)
+   <!-- https://indico.cern.ch/event/1361472/contributions/5972904/ -->
+   - CMS: GPU-accelerated reconstruction in HLT with Pixel, HCAL, ECAL code running on CUDA-enabled GPUs using &nbsp;<a href="https://github.com/alpaka-group/alpaka/"><img src="figures/alpaka-logo.svg" style="height:1.2em; vertical-align:middle;"></a>
+   - LHCb: [Allen](https://gitlab.cern.ch/lhcb/Allen) &mdash; Fully GPU-based HLT1 <br>([Comput Softw Big Sci 4, 7 (2020)](https://doi.org/10.1007/s41781-020-00039-7))
+<!-- TODO: Explain what Gaudi is -->
+* ATLAS and LHCb both build on the [GAUDI](https://inspirehep.net/literature/568472) &nbsp;<a href="https://gaudi.web.cern.ch/gaudi/"><img src="figures/gaudilogo-logo.png" style="height:1.4em; vertical-align:middle;"></a> event data processing framework
+<!-- https://indico.cern.ch/event/1291023/contributions/5866459/ -->
+<!-- TODO: Explain what software systems -->
+<!-- * DUNE TDAQ (data reduction of $O(10^4)$) -->
+]
+]
+.kol-1-2.center[
+<div class="figure-column">
+<figure>
+   <a href="https://lhcb-starterkit-run3.docs.cern.ch/first-analysis-steps/dataflow/">
+      <img src="figures/lhcb_online_dataflow.png" width="100%">
+   </a>
+   <figcaption>LHCb's "Allen" GPU HLT1 and "Moore" CPU HLT2 with the Moore software bring trigger rate down to 1 MHz and 12.5 kHz</figcaption>
+</figure>
+<figure style="--width:100%;">
+   <a href="https://cds.cern.ch/record/2914421">
+      <img src="figures/cms_cpu-vs-gpu.png" width="60%">
+   </a>
+   <figcaption>Comparison of the average processing time per event, measured on the 2024 CMS HLT nodes (<a href="https://cds.cern.ch/record/2914421">CMS-DP-2024-082</a>)</figcaption>
+</figure>
+</div>
+]
+
+<!-- LHC information from Chris Burr:
+The highest level starting point we have is: https://lhcb-starterkit-run3.docs.cern.ch/first-analysis-steps/dataflow/
+
+"Allen" is this "GPU HLT1" step in the second box on the left.
+Moore is the "CPU HLT2" on the right of the buffer.
+The 10GB/s is being sent from point 8 to the grid.
+Which then leads to the offline processing section at the bottom of the page.
+"Moore" (the software) is then used to do a process we call "sprucing".
+Depending on the stream it's either:
+* Just a file format conversion (TURBO)
+* Running the an additional set of selections on top of the HLT2 selections (CALIB/FULL)
+Everything up to this point is "central productions" which are done for people (which analysts only providing selections).
+Then "Analysis Productions" typically involves running "DaVinci" to produce ROOT files of TTrees (soon to be ntuples) of candidates from the output of sprucing.
+We can also run other embarrassingly parallel processing in analysis productions e.g.
+* applying some ROOT RDataFrame workflow to every output file of DaVinci
+* Use uproot and XGBoost to apply a BDT
+* Run various calibration tools to add/transform columns
+This is just user provided code running in conda environments. The only constraint is that it can be ran on any subset of input files and then have the output merged. People also run analysis productions on the output of analysis productions, and there is a ton of re-use/metadata management. Everything is logged, reproducible, metadata and application logs are persisted forever, if output data is used for a paper we archive it to tape for long term preservation and all that kind of stuff.
+The analysis productions system reads about half an exabyte a year of input data.
+(Analysis Productions is my main project in LHCb)
+After analysis productions we aim to have processing fit on a single (potentially large) machine and then LHCb is very unopinionated. The ROOT files we write out doesn't have any custom types so you don't the LHCb physics software or dictionaries to read them.
+Snakemake is pretty popular but there is a long list of things people use, a ton of fitting frameworks, some people use ROOT lots, some people use the purely pyhep stuff, most people use a mixture.
+-->
+
+
+---
+# Event Reconstruction
+
+.kol-1-2[
+.large[
+* CPU intensive event reconstruction software generally experiment specific frameworks given all steps (tracking to calorimeter clustering to physics object reconstruction)
+* Rise of ML-based reconstruction methods
+   - DUNE: CNNs for vertex finding
+   - CMS: CNN-based track seed filtering in HLT
+   - ATLAS: Pursuing GNNs for tracking (benefitting from ACTS)
+   <!-- TODO: Get reference -->
+   - ML-based jet calibration at LHC experiments
+]
+]
+.kol-1-2[
+* [ACTS](https://github.com/acts-project/acts) (A Common Tracking Software) &nbsp;<a href="https://github.com/acts-project/acts"><img src="figures/acts-logo.svg" style="height:1.5em; vertical-align:middle;"></a> is common software for .bold[track reconstruction]
+   - Cross-experiment tracking library
+   - GPU-accelerated track finding
+<!-- https://cds.cern.ch/record/2921878/ -->
+   <!-- - Integration into [ATLAS Athena](https://gitlab.cern.ch/atlas/athena) -->
+   - Over 13 experiments of varying size (ATLAS and LDMX) using ACTS as of [2025 ACTS workshop](https://indico.cern.ch/event/1501989/)
+
+<div class="figure-vcenter" style="--top:30%;">
+   <figure>
+      <a href="http://cds.cern.ch/record/2912217">
+         <img src="figures/ATLAS_acts_vs_nonacts.png" width="110%">
+      </a>
+      <figcaption>CPU time of ACTS (more computation) / non-ACTS (default) in ATLAS Athena for track finding with improvements applied.<br>(<a href="http://cds.cern.ch/record/2912217">ATL-PHYS-PUB-2024-017</a>)</figcaption>
+   </figure>
+</div>
+]
+
+---
+# End-user Analysis
+
+.large.center[End-user analysis software ranges broadly across HEP given multitude of use cases]
+
+.kol-1-3[
+<div class="figure-vcenter" style="--top:55%;">
+   <figure>
+   <a href="https://root.cern/">
+      <img src="figures/root-logo.svg"; width=95%>
+   </a>
+.code-large[
+* .bold[C++ tools]: Large and rich ecosystem across field
+* <a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> provides strong common backbone
+]
+   </figure>
+</div>
+]
+.kol-1-3[
+<div class="figure-vcenter" style="--top:45%;">
+   <figure>
+   <a href="https://scikit-hep.org/">
+      <img src="figures/pyhep-ecosystem.svg"; width=95%>
+   </a>
+.code-large[
+* .bold[PyHEP]: Pythonic ecosystem aimed at reducing analyst time to insight
+* Interoperable with broader Scientific Python ecosystem
+]
+   </figure>
+</div>
+]
+.kol-1-3[
+<div class="figure-vcenter" style="--top:55%;">
+   <figure>
+   <a href="https://www.juliahep.org/">
+      <img src="figures/julia-hep-with-julia-logo.png"; width=100%>
+   </a>
+.code-large[
+* .bold[JuliaHEP]: New HSF Activity to explore the nascent ecosystem
+* Adopters across broader particle physics in LEGEND, ATLAS, KM3Net
+]
+   </figure>
+</div>
+]
+
+---
+# Languages for future software
+
+<p style="text-align:center;">
+   <a href="https://indico.jlab.org/event/505/contributions/9207/">
+      <img src="figures/hep-programming-language-history.png"; width=90%>
+   </a>
+</p>
+
+.center.large[Language transitions in the field (so far) ([Jim Pivarksi, 2022](https://indico.jlab.org/event/505/contributions/9207/))]
+
+.large[
+* C++ exists still as <s>the</s> a .bold[common language] today for the field
+* 2030s: Perhaps a .bold[different ecosystem view] with modern languages (Rust, Julia) becoming more commonplace with the rise of LLMs / machine learning-based assistive tools in scientific software development
+* Will need to .bold[balance] innovation with long-term maintainability
+]
+
+---
+# Software for future experiments
 
 .kol-2-3[
-.huge[
-* Overview
+.large[
+* In 2026 multiple .bold[future collider experiments] performing software studies:
+   - Circular Electron Positron Collider (CEPC)
+   - Compact Linear Collider (CLIC)
+   - Electron-Ion Collider (EIC)
+   - Future Circular Collider (FCC)
+   - International Linear Collider (ILC)
+   - Muon Collider
+* Efforts on-going to provide .bold[common software] solutions for the collider research community
+   - Example:<a href="https://github.com/key4hep"><img src="figures/key4hep-logo.png" style="height:3.0em; vertical-align:middle;"></a>  provides common libraries for generation, simulation, reconstruction, and analysis
 ]
+]
+.kol-1-3.center[
+.bold[Builds on open community stack]
+
+<div class="figure-column" style="--height:auto;">
+<figure>
+   <a href="https://root.cern/">
+      <img src="figures/root-logo.svg"; width=80%>
+   </a>
+</figure>
+<figure>
+   <a href="https://cern.ch/geant4">
+      <img src="figures/geant4-logo.png"; width=90%>
+   </a>
+</figure>
+<figure>
+   <a href="https://dd4hep.web.cern.ch/dd4hep/">
+      <img src="figures/dd4hep_logo.png"; width=30%>
+   </a>
+</figure>
+<figure>
+   <a href="https://gaudi.web.cern.ch/gaudi/">
+      <img src="figures/gaudilogo-logo.png"; width=30%>
+   </a>
+</figure>
+
+</div>
+]
+
+---
+# Software life cycles
+
+<p style="text-align:center;">
+   <a href="https://www.linuxfoundation.org/blog/blog/the-lifecycles-of-open-source-projects">
+      <img src="figures/lifecycles-of-an-open-source-project.svg"; width=90%>
+   </a>
+</p>
+<!-- .center[Open source software project life cycle as thought of by The Linux Foundation] -->
+
+.large[
+* Ever piece of software will eventually (ideally) be sunset (not a bad thing)
+* Projects like key4hep are able to build on the community open stack given those projects have .bold[supported long-term maintainers]
+   - Support from CERN EP-SFT and other areas sometimes taken as implicit assumption
+* .bold[Maintainership] in contrast to .bold[developing] required for .bold[guiding projects] over multiple year (or decade) .bold[stages of software life cycle]
+   - Cultivation of focus and support of maintainership ongoing topic for APS DPF .bold[Coordinating Panel for Software and Computing] (more in [Ian Fisk's 2026-03-18 talk](https://summit.aps.org/smt/2026/events/APR-P88/5))
+]
+
+---
+# Summary: A look towards community software
+
+.huge[
+* HEP software ecosystem is .bold[broad] by necessity to cover wide scope and scale
+* Despite breadth, through community engagement excellent .bold[solutions are shared]
+* .bold[Interoperability] is a huge boon that provides benefits across the stack
+   - In both developer experience and user experience
+* If development cycles can get faster (new languages paired with new tools), should ensure .bold[community development and maintainership] of software to maximally scale these benefits
 ]
 
 ---
 class: end-slide, center
 
 .large[Backup]
+
+---
+# JuliaHEP growing community
+
+<br>
+.kol-1-2[
+.large[
+* LEGEND: Julia based software stack in parallel to C++ and Python
+* KM3Net (Cubic Kilometre Neutrino Telescope)
+* DUNE: TPC reco study and visualization
+* IceCube
+* TAMBO ([arXiv:2507.08070](https://arxiv.org/abs/2507.08070))
+]
+]
+.kol-1-2[
+<div class="figure-vcenter" style="--top:30%;">
+   <figure>
+   <a href="https://www.juliahep.org/">
+      <img src="figures/julia-hep-with-julia-logo.png"; width=100%>
+   </a>
+</div>
+]
+
+---
+# Software life cycles
+
+<p style="text-align:center;">
+   <a href="https://www.linuxfoundation.org/blog/blog/the-lifecycles-of-open-source-projects">
+      <img src="figures/lifecycles-of-an-open-source-project.svg"; width=90%>
+   </a>
+</p>
+
+.center[[The Life Cycles of Open Source Projects, The Linux Foundation](https://www.linuxfoundation.org/blog/blog/the-lifecycles-of-open-source-projects)]
+
+* .bold[Proposal]: Where a specific need is identified, planning preparations for resources and work
+* .bold[Incubation]: Proposal is approved, resources are assigned, early development.
+* .bold[Mature]: Several successful releases and on track with vision.
+* .bold[Core]: Reached a broad audience due to its value. Teams need to focus on maintaining and keeping the pace steady.
+* .bold[Archived]: Good: Project has reached its goal. Bad: Unforeseen circumstances (bitrot).
 
 ---
 

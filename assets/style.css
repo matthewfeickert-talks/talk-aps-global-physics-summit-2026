@@ -428,6 +428,62 @@ td {
     width: 200%;
 }
 
+/* Vertically center a figure within the slide content area.
+   Use --top to set the vertical position (default: 50%).
+   Use --width to set the figure width (default: 100%).
+   Example: <div class="figure-vcenter" style="--top:50%; --width:100%;">
+   Supports an optional <figcaption> below the image. */
+.figure-vcenter {
+    position: relative;
+    height: 550px;
+}
+
+.figure-vcenter > figure {
+    position: absolute;
+    top: var(--top, 50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--width, 100%);
+    margin: 0;
+    text-align: center;
+}
+
+.figure-vcenter > figure ul {
+    text-align: left;
+}
+
+.figure-vcenter > figure > figcaption {
+    margin-top: 0.4em;
+    font-size: 0.8em;
+}
+
+/* Stack multiple figures vertically in a column.
+   Use --width on individual <figure> elements to control their width.
+   Example:
+   <div class="figure-column">
+      <figure><img ...><figcaption>...</figcaption></figure>
+      <figure><img ...><figcaption>...</figcaption></figure>
+   </div> */
+.figure-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: var(--height, 550px);
+    gap: 0.8em;
+}
+
+.figure-column > figure {
+    margin: 0;
+    text-align: center;
+    width: var(--width, 100%);
+}
+
+.figure-column > figure > figcaption {
+    margin-top: 0.4em;
+    font-size: 0.8em;
+}
+
 /* Title slide */
 
 .title-slide:after {
@@ -458,7 +514,8 @@ td {
 /* Even worse hack to get another logo on */
 .title-slide:before {
     content: '';
-    background: url("../assets/logos/logo_ATLAS.png") no-repeat;
+    /* background: url("../assets/logos/logo_ATLAS.png") no-repeat; */
+    background: url("../assets/logos/logo_IRIS-HEP.png") no-repeat;
     background-size: 100% 100%;
     width: 242px;
     height: 127px;
