@@ -79,12 +79,7 @@ $$
       <img src="figures/prediction-simulation-chain.png"; width=100%>
    </a>
 </p>
-<!-- TODO: Fix figure -->
 ]
-
-???
-Simulation is essential for interpreting experimental results, and it consumes roughly half of the global HEP computing budget. The chain starts with physics event generators — MadGraph and Sherpa for hard processes, Pythia and Herwig for parton showering and hadronization — and continues through Geant4 for detailed detector response simulation. Because full Geant4 simulation is so expensive, the community is actively pursuing fast simulation alternatives: parametric approaches like AtlFast and Delphes, and increasingly ML-based surrogates like CaloFlow for calorimeter simulation. The HSF Generator Working Group coordinates community-wide efforts to improve generator software efficiency, which is critical for the HL-LHC era.
-
 
 ---
 # Data Acquisition & Trigger
@@ -179,10 +174,6 @@ Snakemake is pretty popular but there is a long list of things people use, a ton
 </div>
 ]
 
-???
-Once events pass the trigger, they must be reconstructed — turning raw detector hits into physics objects like tracks, jets, and leptons. This is the most computationally expensive step. Track reconstruction alone can dominate the CPU budget, which has motivated cross-experiment efforts like Acts — A Common Tracking Software — that provides a detector-agnostic, thread-safe, GPU-capable tracking library. Machine learning is increasingly being explored for reconstruction tasks, with graph neural networks showing promise for track finding in the dense environments expected at the HL-LHC.
-
-
 ---
 # End-user Analysis
 
@@ -241,7 +232,6 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
 
 .large[
 * C++ exists still as <s>the</s> a .bold[common language] today for the field
-<!-- * End-user analysis software ranges broadly across HEP and beyond &nbsp;<a href="https://root.cern/"><img src="figures/root-logo.svg" style="height:1.5em; vertical-align:middle;"></a> being a ubiquitous dependency, there is a wide spread of tooling -->
 * 2030s: Perhaps a .bold[different ecosystem view] with modern languages (Rust, Julia) becoming more commonplace with the rise of LLMs / machine learning-based assistive tools in scientific software development
 * Will need to .bold[balance] innovation with long-term maintainability
 ]
@@ -318,12 +308,6 @@ Once events pass the trigger, they must be reconstructed — turning raw detecto
    - In both developer experience and user experience
 * If development cycles can get faster (new languages paired with new tools), should ensure .bold[community development and maintainership] of software to maximally scale these benefits
 ]
-
-<!-- .huge[
-* Ecosystem is engaging with community software and broader open source scientific software to leverage opportunities new tools and compute
-* In 50+ year history have found success in broader community projects
-* Supported maintainership roles can be critical to continued success
-] -->
 
 ---
 class: end-slide, center
